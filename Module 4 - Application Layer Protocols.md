@@ -124,3 +124,42 @@ Content-Type: image/jpeg
 - Client program known as a resolver
 	- "The DNS client"
 	- Used by web browser, email, etc.
+
+#### DNS Servers
+- Names are divided among a hierarchy of servers; each is an authority for some names
+- Multiple groupings possible
+
+#### Name Resolution and Caching
+- Resolver
+	- Acts as a client
+	- Is configured w/ address of local DNS server
+	- Contacts local server first
+	- Socket library resolves is gethostbyname
+- Caching
+	- Follows locality of reference principle
+	- Each DNS server caches results
+	- Cached item never kept when stale
+
+#### DNS Server Algorithm Pt. 1
+- Given
+	- Request message form a DNS name resolver
+- Provide
+	- Response message that contains address
+
+##### Method
+```
+extract name N from request
+if (server is authority for N) {
+	Form and send auth response to requester
+} else if (answer for N is in cache) {
+	Form and send a nonauthoritative response to the requester
+} else {
+	if (authority server for N is known) {
+		send request to authority server
+	} else {
+		Send request to root server
+	}
+	Receive response and place in cache
+	Form and send response to the requester
+}
+```

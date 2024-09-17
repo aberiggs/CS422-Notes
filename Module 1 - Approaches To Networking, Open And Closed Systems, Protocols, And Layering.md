@@ -60,7 +60,7 @@
 - Design an efficient implementation
 - **The key** - choose a good abstraction
 
-#### What Make Protocol Design Difficult
+#### What Makes Protocol Design Difficult
 - Multiple implementations of a protocol will exist
 - Implementations will be created by multiple individuals/organizations
 - Many details to consider

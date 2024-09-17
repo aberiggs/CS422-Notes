@@ -1,5 +1,4 @@
 # Module 3 - Network Programming
-
 #### Topics
 - Internet services & communication paradigms
 - Client-server model & alternatives
@@ -18,8 +17,6 @@
 
 #### Communication Paradigms
 - The internet offers 2 communication paradigms
-
-
 
 | Stream Paradigm              | Message Paradigm                  |
 | ---------------------------- | --------------------------------- |
